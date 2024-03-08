@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>MainWindow</class>
+	<widget class="QMainWindow" name="MainWindow">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>911</width>
+				<height>670</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>MainWindow</string>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<widget class="QPushButton" name="loadImgBtn">
+				<property name="geometry">
+					<rect>
+						<x>780</x>
+						<y>20</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Load Image...</string>
+				</property>
+			</widget>
+			<widget class="QLabel" name="mainImage">
+				<property name="geometry">
+					<rect>
+						<x>30</x>
+						<y>60</y>
+						<width>361</width>
+						<height>241</height>
+					</rect>
+				</property>
+				<property name="frameShape">
+					<enum>QFrame::Box</enum>
+				</property>
+				<property name="frameShadow">
+					<enum>QFrame::Raised</enum>
+				</property>
+				<property name="text">
+					<string>Original</string>
+				</property>
+				<property name="scaledContents">
+					<bool>true</bool>
+				</property>
+				<property name="alignment">
+					<set>Qt::AlignCenter</set>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label">
+				<property name="geometry">
+					<rect>
+						<x>130</x>
+						<y>20</y>
+						<width>141</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="font">
+					<font>
+						<pointsize>18</pointsize>
+					</font>
+				</property>
+				<property name="text">
+					<string>Original</string>
+				</property>
+			</widget>
+			<widget class="QLabel" name="processedImage">
+				<property name="geometry">
+					<rect>
+						<x>30</x>
+						<y>370</y>
+						<width>361</width>
+						<height>241</height>
+					</rect>
+				</property>
+				<property name="frameShape">
+					<enum>QFrame::Box</enum>
+				</property>
+				<property name="frameShadow">
+					<enum>QFrame::Raised</enum>
+				</property>
+				<property name="text">
+					<string>Processed</string>
+				</property>
+				<property name="scaledContents">
+					<bool>false</bool>
+				</property>
+				<property name="alignment">
+					<set>Qt::AlignCenter</set>
+				</property>
+			</widget>
+			<widget class="QFrame" name="frame">
+				<property name="geometry">
+					<rect>
+						<x>10</x>
+						<y>10</y>
+						<width>401</width>
+						<height>611</height>
+					</rect>
+				</property>
+				<property name="cursor">
+					<cursorShape>ArrowCursor</cursorShape>
+				</property>
+				<property name="autoFillBackground">
+					<bool>false</bool>
+				</property>
+				<property name="frameShape">
+					<enum>QFrame::Box</enum>
+				</property>
+				<property name="frameShadow">
+					<enum>QFrame::Raised</enum>
+				</property>
+				<widget class="QLabel" name="label_2">
+					<property name="geometry">
+						<rect>
+							<x>100</x>
+							<y>310</y>
+							<width>231</width>
+							<height>31</height>
+						</rect>
+					</property>
+					<property name="font">
+						<font>
+							<pointsize>18</pointsize>
+						</font>
+					</property>
+					<property name="text">
+						<string>Processed</string>
+					</property>
+				</widget>
+			</widget>
+			<widget class="QLabel" name="imagePathTxt">
+				<property name="geometry">
+					<rect>
+						<x>440</x>
+						<y>20</y>
+						<width>301</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Image Path:</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="medianBtn">
+				<property name="geometry">
+					<rect>
+						<x>780</x>
+						<y>60</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Median</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="GBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>780</x>
+				  <y>450</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>G channel</string>
+				</property>
+			   </widget>
+			   <widget class="QDoubleSpinBox" name="GInput">
+				<property name="geometry">
+				 <rect>
+				  <x>660</x>
+				  <y>450</y>
+				  <width>112</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="decimals">
+				 <number>0</number>
+				</property>
+				<property name="minimum">
+				 <double>0.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>256.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>0.000000000000000</double>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="RInput">
+				<property name="geometry">
+				 <rect>
+				  <x>660</x>
+				  <y>490</y>
+				  <width>112</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="decimals">
+				 <number>0</number>
+				</property>
+				<property name="minimum">
+				 <double>0.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>256.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>1.00000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>0.000000000000000</double>
+				</property>
+			   </widget>
+			   <widget class="QPushButton" name="RBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>780</x>
+				  <y>490</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>R channel</string>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="medianValBox">
+				<property name="geometry">
+					<rect>
+						<x>659</x>
+						<y>60</y>
+						<width>112</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="decimals">
+					<number>0</number>
+				</property>
+				<property name="minimum">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="singleStep">
+					<double>2.000000000000000</double>
+				</property>
+				<property name="stepType">
+					<enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+					<double>1.000000000000000</double>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="ContrastAndBrightnessBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>780</x>
+				  <y>240</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>ContrastandBrightness</string>
+				</property>
+			   </widget>
+			   <widget class="QDoubleSpinBox" name="ContrastInput">
+				<property name="geometry">
+				 <rect>
+				  <x>660</x>
+				  <y>240</y>
+				  <width>111</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="decimals">
+				 <number>0</number>
+				</property>
+				<property name="minimum">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>127.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>1.000000000000000</double>
+				</property>
+			   </widget>
+			   <widget class="QLabel" name="label_5">
+				<property name="geometry">
+				 <rect>
+				  <x>660</x>
+				  <y>220</y>
+				  <width>71</width>
+				  <height>20</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>Contrast</string>
+				</property>
+			   </widget>
+			   <widget class="QDoubleSpinBox" name="BrightnessInput">
+				<property name="geometry">
+				 <rect>
+				  <x>540</x>
+				  <y>240</y>
+				  <width>111</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="decimals">
+				 <number>0</number>
+				</property>
+				<property name="minimum">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>100.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>1.000000000000000</double>
+				</property>
+			   </widget>
+			   <widget class="QLabel" name="label_6">
+				<property name="geometry">
+				 <rect>
+				  <x>540</x>
+				  <y>220</y>
+				  <width>71</width>
+				  <height>20</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>Brightness</string>
+				</property>
+			   </widget>
+			
+			<widget class="QPushButton" name="LogTransformBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>140</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Log Transformation</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="AverageBtn">
+				<property name="geometry">
+					<rect>
+						<x>550</x>
+						<y>140</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Average</string>
+				</property>
+			</widget>
+
+			<widget class="QDoubleSpinBox" name="vgaussianInput">
+				<property name="geometry">
+					<rect>
+						<x>660</x>
+						<y>290</y>
+						<width>111</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="decimals">
+					<number>0</number>
+				</property>
+				<property name="minimum">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+					<double>100.000000000000000</double>
+				</property>
+				<property name="singleStep">
+					<double>2.000000000000000</double>
+				</property>
+				<property name="stepType">
+					<enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+					<double>1.000000000000000</double>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label_7">
+				<property name="geometry">
+					<rect>
+						<x>660</x>
+						<y>270</y>
+						<width>71</width>
+						<height>20</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Image V</string>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label_8">
+				<property name="geometry">
+					<rect>
+						<x>540</x>
+						<y>270</y>
+						<width>71</width>
+						<height>20</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Image U</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="GaussianBtn">
+				<property name="geometry">
+					<rect>
+						<x>780</x>
+						<y>290</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Gaussian</string>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="ugaussianInput">
+				<property name="geometry">
+					<rect>
+						<x>540</x>
+						<y>290</y>
+						<width>111</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="decimals">
+					<number>0</number>
+				</property>
+				<property name="minimum">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+					<double>100.000000000000000</double>
+				</property>
+				<property name="singleStep">
+					<double>2.000000000000000</double>
+				</property>
+				<property name="stepType">
+					<enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+					<double>1.000000000000000</double>
+				</property>
+			</widget>
+
+	
+
+			<widget class="QPushButton" name="negativeBtn">
+				<property name="geometry">
+					<rect>
+						<x>550</x>
+						<y>450</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Negative Image</string>
+				</property>
+			</widget>
+		
+		
+		
+		
+
+			<widget class="QPushButton" name="HistogramBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>450</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Histogram</string>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="widthInput">
+				<property name="geometry">
+					<rect>
+						<x>560</x>
+						<y>580</y>
+						<width>107</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="decimals">
+					<number>0</number>
+				</property>
+				<property name="minimum">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+					<double>1080.000000000000000</double>
+				</property>
+				<property name="singleStep">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+					<enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+					<double>1.000000000000000</double>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label_12">
+				<property name="geometry">
+					<rect>
+						<x>560</x>
+						<y>560</y>
+						<width>71</width>
+						<height>20</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Width</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="resizeBtn">
+				<property name="geometry">
+					<rect>
+						<x>780</x>
+						<y>580</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Resize</string>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="heightInput">
+				<property name="geometry">
+					<rect>
+						<x>667</x>
+						<y>580</y>
+						<width>107</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="decimals">
+					<number>0</number>
+				</property>
+				<property name="minimum">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="maximum">
+					<double>1080.000000000000000</double>
+				</property>
+				<property name="singleStep">
+					<double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+					<enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+					<double>1.000000000000000</double>
+				</property>
+			</widget>
+			<widget class="QLabel" name="label_13">
+				<property name="geometry">
+					<rect>
+						<x>670</x>
+						<y>560</y>
+						<width>71</width>
+						<height>20</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Height</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="saveBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>580</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="styleSheet">
+					<string notr="true"/>
+				</property>
+				<property name="text">
+					<string>Save</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="KernelAverageBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>670</x>
+				  <y>370</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>Kernel Average</string>
+				</property>
+			   </widget>
+			<widget class="QPushButton" name="rgbBTn">
+				<property name="geometry">
+					<rect>
+						<x>670</x>
+						<y>330</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>RGB</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="additionBtn">
+				<property name="geometry">
+					<rect>
+						<x>550</x>
+						<y>330</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Addition</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="subtractBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>290</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Subtract</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="BBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>780</x>
+				  <y>410</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>B channel</string>
+				</property>
+			   </widget>
+			   <widget class="QDoubleSpinBox" name="BInput">
+				<property name="geometry">
+				 <rect>
+				  <x>660</x>
+				  <y>410</y>
+				  <width>111</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="decimals">
+				 <number>0</number>
+				</property>
+				<property name="minimum">
+				 <double>0.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>256.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>1.000000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>0.000000000000000</double>
+				</property>
+			   </widget>
+			<widget class="QPushButton" name="cropBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>330</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Crop Image</string>
+				</property>
+			</widget>
+			<widget class="QPushButton" name="KernelSharpenBtn">
+				<property name="geometry">
+				 	<rect>
+				  		<x>780</x>
+				  		<y>330</y>
+				  		<width>101</width>
+				  		<height>31</height>
+				 	</rect>
+				</property>
+				<property name="text">
+				 	<string>KernelSharpen</string>
+				</property>
+			</widget>
+			<widget class="QDoubleSpinBox" name="powerInput">
+				<property name="geometry">
+				 	<rect>
+				  		<x>659</x>
+				  		<y>100</y>
+				  		<width>112</width>
+				  		<height>31</height>
+				 	</rect>
+				</property>
+				<property name="decimals">
+				 <number>1</number>
+				</property>
+				<property name="minimum">
+				 <double>0.000000000000000</double>
+				</property>
+				<property name="maximum">
+				 <double>10.000000000000000</double>
+				</property>
+				<property name="singleStep">
+				 <double>0.100000000000000</double>
+				</property>
+				<property name="stepType">
+				 <enum>QAbstractSpinBox::DefaultStepType</enum>
+				</property>
+				<property name="value">
+				 <double>0.000000000000000</double>
+				</property>
+			   </widget>
+			   <widget class="QPushButton" name="powerBtn">
+				<property name="geometry">
+				 <rect>
+				  <x>780</x>
+				  <y>100</y>
+				  <width>101</width>
+				  <height>31</height>
+				 </rect>
+				</property>
+				<property name="text">
+				 <string>PowerLaw</string>
+				</property>
+			   </widget>
+			<widget class="QPushButton" name="equalizationBtn">
+				<property name="geometry">
+					<rect>
+						<x>430</x>
+						<y>190</y>
+						<width>101</width>
+						<height>31</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>Histogram Equalization</string>
+				</property>
+			</widget>
+			<zorder>frame</zorder>
+			<zorder>loadImgBtn</zorder>
+			<zorder>mainImage</zorder>
+			<zorder>label</zorder>
+			<zorder>processedImage</zorder>
+			<zorder>imagePathTxt</zorder>
+			<zorder>medianBtn</zorder>
+			<zorder>medianValBox</zorder>
+			<zorder>minFilterBtn</zorder>
+			<zorder>minfilterInput</zorder>
+			<zorder>maxfilterInput</zorder>
+			<zorder>maxFilterBtn</zorder>
+			<zorder>greenBtn</zorder>
+			<zorder>greenInput</zorder>
+			<zorder>LogTransformBtnBtn</zorder>
+			<zorder>AverageBtn</zorder>
+			<zorder>powerInput</zorder>
+			<zorder>powerBtn</zorder>
+			<zorder>ContrastAndBrightnessBtn</zorder>
+			<zorder>laplicianBtn</zorder>
+			<zorder>RBtn</zorder>
+			<zorder>RInput</zorder>
+			<zorder>label_9</zorder>
+			<zorder>GBtn</zorder>
+			<zorder>BBtn</zorder>
+			<zorder>GInput</zorder>
+			<zorder>BInput</zorder>
+			<zorder>vgaussianInput</zorder>
+			<zorder>label_6</zorder>
+			<zorder>label_7</zorder>
+			<zorder>label_5</zorder>
+			<zorder>label_8</zorder>
+			<zorder>GaussianBtn</zorder>
+			<zorder>ugaussianInput</zorder>
+			<zorder>negativeBtn</zorder>
+			<zorder>contrastBtn</zorder>
+			<zorder>HistogramBtn</zorder>
+			<zorder>widthInput</zorder>
+			<zorder>label_12</zorder>
+			<zorder>resizeBtn</zorder>
+			<zorder>heightInput</zorder>
+			<zorder>BInput</zorder>
+			<zorder>BBtn</zorder>
+			<zorder>label_13</zorder>
+			<zorder>saveBtn</zorder>
+			<zorder>KernelSharpenBtn</zorder>
+			<zorder>rgbBTn</zorder>
+			<zorder>KernelAverageBtn</zorder>
+			<zorder>additionBtn</zorder>
+			<zorder>subtractBtn</zorder>
+			<zorder>equalizationBtn</zorder>
+		</widget>
+		<widget class="QStatusBar" name="statusbar"/></widget>
+	<tabstops>
+		<tabstop>loadImgBtn</tabstop>
+	</tabstops>
+	<resources/>
+	<connections/>
+</ui>
