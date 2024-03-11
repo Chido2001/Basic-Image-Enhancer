@@ -10,7 +10,7 @@ A demo for my school project, contains basic image processing methods
 
 **  GUI:**
   This is the graphic interface of the program,
-  ![pro1](https://github.com/Chido2001/Basic-Image-Enhancer/assets/64625455/9f17eb5a-0dca-4abd-8865-f219e6b219c2)
+![pro1](https://github.com/Chido2001/Basic-Image-Enhancer/assets/64625455/9f17eb5a-0dca-4abd-8865-f219e6b219c2)
 The chosen image will be displayed in the 'Original' box, and the processed will be display in the 'Processed' box
 ![Picture2](https://github.com/Chido2001/Basic-Image-Enhancer/assets/64625455/f5d8a3ca-0c1e-4846-ad49-eeef4a7da68e)
 
